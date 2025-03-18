@@ -16,14 +16,15 @@
             Diak legmagasabb = diakok[0];
             foreach (var item in diakok)
             {
-                if (legmagasabb.Magassag > item.Magassag) 
+                if (legmagasabb.Magassag < item.Magassag) 
                 {
                     legmagasabb = item;
                 }
                 
-                Console.WriteLine(item.Magassag);
+                
 
             }
+            Console.WriteLine($"3. b, Feladat: A legmagasabb diák: {legmagasabb.Nev} magassága {legmagasabb.Magassag}");
         }
     }
 }
