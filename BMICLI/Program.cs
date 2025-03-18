@@ -1,4 +1,6 @@
-﻿namespace BMICLI
+﻿using System.Reflection.Emit;
+
+namespace BMICLI
 {
     internal class Program
     {
@@ -32,7 +34,7 @@
             int egeszseg = diakok.Count(x => x.bmiKategoria() == "Normál testsúlyú");
             Console.WriteLine($"5. b, Feladat: Egészséges BMI tartományba eső diákok száma: {egeszseg}");
             bool eva = diakok.Any(x =>x.Nev== "Tóth Éva");
-            Console.WriteLine($"5. c, Feladat: Van-e Tóth Éva a diákok között?  {eva}");
+            Console.WriteLine($"5. c, Feladat: Van-e Tóth Éva a diákok között?  {(eva? "igen":"nem")}");
         }
 
 
