@@ -25,6 +25,16 @@
 
             }
             Console.WriteLine($"3. b, Feladat: A legmagasabb diák: {legmagasabb.Nev} magassága {legmagasabb.Magassag}");
+
+
+            double atlag = diakok.Average(X=>X.Testsuly);
+            Console.WriteLine($"5. a, Feladat: Az átlagos testsúly: {atlag:0.0} kg");
+            int egeszseg = diakok.Count(x => x.bmiKategoria() == "Normál testsúlyú");
+            Console.WriteLine($"5. b, Feladat: Egészséges BMI tartományba eső diákok száma: {egeszseg}");
+            bool eva = diakok.Any(x =>x.Nev== "Tóth Éva");
+            Console.WriteLine($"5. c, Feladat: Van-e Tóth Éva a diákok között?  {eva}");
         }
+
+
     }
 }

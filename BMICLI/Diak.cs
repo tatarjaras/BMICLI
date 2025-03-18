@@ -22,5 +22,33 @@ namespace BMICLI
             Testsuly = int.Parse(bontas[3]);
         }
 
+
+        public double bmi()
+        {
+            return Math.Round(Testsuly/Math.Pow(Magassag/100.0,2),2);
+        }
+
+        public string bmiKategoria()
+        {
+            if (bmi() <18.5) 
+            {
+                return ("Sovány");
+            }
+            else if (bmi() <24.9)
+            {
+                return ("Normál testsúlyú");
+            }
+            else if (bmi()<29.9)
+            {
+                return ("Túlsúlyos");
+            }
+            else 
+            {
+                return ("Elhízott"); 
+            }
+        }
+
     }
+
+
 }
