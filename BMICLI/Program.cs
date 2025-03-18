@@ -35,6 +35,9 @@ namespace BMICLI
             Console.WriteLine($"5. b, Feladat: Egészséges BMI tartományba eső diákok száma: {egeszseg}");
             bool eva = diakok.Any(x =>x.Nev== "Tóth Éva");
             Console.WriteLine($"5. c, Feladat: Van-e Tóth Éva a diákok között?  {(eva? "igen":"nem")}");
+            string[] egeszsegesdiakok = new string[egeszseg];
+            File.WriteAllLines("egeszseges_diakok.txt",egeszsegesdiakok);
+            Console.WriteLine("6. Feladat: AZ egészséges diákok adatai fájlba mentve.");
         }
 
 
